@@ -1,0 +1,24 @@
+#include <stdio.h>
+int digitsum(int a); //function declaration
+int main()
+{
+   int num,sum;
+   //reading input from the user
+   printf("Input number: ");
+   scanf(" %d",&num);
+   //function call
+   sum=digitsum(num);
+   printf("Sum of digits:%d",sum);
+   return 0;
+}
+// function defination
+int digitsum(int num)
+{
+   if(num==0)
+     return 0;
+   return(num%10+digitsum(num/10));
+}
+   
+   
+
+   
